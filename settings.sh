@@ -1038,9 +1038,9 @@ This will override any neovim configurations done previously" | imenu -C; then
 
 positionsettings() {
     menu '>>h Settings window positioning'
-    menu 'Left'
-    menu 'Center'
-    menu 'Right'
+    menu ':g Left'
+    menu ':y Center'
+    menu ':r Right'
     menu ':b Back'
     CHOICE="$(meta positionsettings menu | sidebar)"
     if [ -z "$CHOICE" ] || grep -iq "back" <<<"$CHOICE"; then
